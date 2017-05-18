@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+}
+.main{
+	width:1200px;
+	height:398px;
+	background-image: url(image/product.jpg);
+	margin:0 auto;
+	position:relative;
+	color:#F00;
+	border:none;
+}
+.time{
+	position:absolute;
+	left:46%;
+	top:123px;
+	font:bold 20px/24px 黑体；
+}
+
+</style>
+</head>
+
+<body>
+<div class="main">
+ <div class="time">还剩：<span id="left"></span></div>
+</div>
+<script type="text/javascript">
+window.onload=function(){
+	showTime();
+	var fresh;
+	fresh = setInterval(showTime,1000);
+}
+function showTime(){
+	var endTime = new Date("2016/11/11,00:00:00");
+	var now = new Date();
+	var leftTime = parseInt((endTime.getTime()-now.getTime())/1000);
+	var d = parseInt(leftTime/(60*60*24));
+	var h = parseInt((leftTime/3600)%24);
+	var m = parseInt((leftTime/60)%60);
+	var s = parseInt(leftTime%60);
+	
+	document.getElementById("left").innerHTML = d+"天"+h+"小时"+m+"分"+s+"秒";
+	if(leftTime<=0){
+		document.getElementById("left").innerHTML="团购已结束";	
+	}
+}
+
+</script>
+</body>
+</html>

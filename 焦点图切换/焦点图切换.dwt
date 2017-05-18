@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>焦点图切换</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.wrap{
+	width:490px;
+	height:170px;
+	border:1px solid #CCC;
+	overflow:hidden;
+	margin:100px auto;
+	position:relative;
+}
+#pic li{
+	display:block;
+}
+.wrap ol{
+	position:absolute;
+	right:5px;
+	bottom:10px;
+}
+.wrap ol li{
+	display:block;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	color:#FFF;
+	text-align:center;
+	font:16px;
+	border:1px solid #000;
+	background-color:#CCC;
+	margin-right:5px;
+	float:left;
+	cursor:pointer;
+}
+.wrap ol .on{
+	background-color:#F90;
+	color:#FFF;
+}
+</style>
+</head>
+
+<body>
+ <div id="wrap" class="wrap">
+   <ul id="pic" >
+     <li><img src="images/1.jpg"></img></li>
+     <li><img src="images/2.jpg"></img></li>
+     <li><img src="images/3.jpg"></img></li>
+     <li><img src="images/4.jpg"></img></li>
+     <li><img src="images/5.jpg"></img></li>
+   </ul>
+   <ol id="list">
+     <li class="on">1</li>
+     <li>2</li>
+     <li>3</li>
+     <li>4</li>
+     <li>5</li>
+   </ol>
+ </div> 
+ <script type="text/javascript">
+  window.onload=function(){
+	  var wrap = document.getElementById('wrap'),
+	      pic = document.getElementById('pic'),
+		  list = document.getElementById('list').getElementsByTagName('li'),
+		  index = 0,
+		  timer = null;
+		  
+	  function auto(){
+		  timer = setInterval(function(){
+			  index++;
+			  if(index>=list.length){
+				  index=0;
+			  }
+			  change(index);
+		  },1000)
+	  }
+	  
+	  auto();
+	  
+	  function change(curIndex){
+		  pic.style.marginTop = -170*curIndex+'px';
+		  for(var n=0;n<list.length;n++){
+			  list[n].className='';
+		  }
+		  list[curIndex].className='on';
+		  index = curIndex;
+	  }
+	  
+	  wrap.onmouseover=function(){
+		  clearInterval(timer);
+	  }
+	  wrap.onmouseout=auto;
+	  
+	  for(var i=0;i<list.length;i++){
+		  list[i].id=i;
+		  list[i].onmouseover=function(){
+			  change(this.id);
+		  }
+	  }
+  }
+ </script>	
+</body>
+</html>

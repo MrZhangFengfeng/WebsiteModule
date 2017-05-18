@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>网页定位导航</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+#bigBox{
+	width:844px;
+	margin:40px auto;
+	padding:16px;
+}
+#content h1{
+	display:block;
+	margin:5px 0;
+	height:36px;
+	font: bolder 32px/36px Verdana, Geneva, sans-serif;
+	
+}
+#nav{
+	position:fixed;
+	top:150px;
+	left:50%;
+	margin-left:422px;
+}
+#nav ul{
+	width:100px;
+}
+#nav ul li{
+	list-style:none;
+}
+#nav ul li a{
+	display:block;
+	text-decoration:none;
+	height:40px;
+	font:24px/40px Verdana, Geneva, sans-serif;
+	margin-bottom:10px;
+}
+.current{
+	color:#FFF;
+	background-color:RGB(0,136,187);
+	cursor:pointer;
+}
+#nav ul li a:hover{
+	color:#FFF;
+	background-color:RGB(0,136,187);
+	cursor:pointer;
+}
+.item{
+	width:800px;
+	margin-bottom:20px;
+	padding:20px;
+	border:2px dotted #666666;
+	overflow:hidden;
+}
+.item h2{
+	display:block;
+	height:28px;
+	margin-bottom:10px;
+	font:bold 20px/24px 微软雅黑;
+	border-bottom:4px solid #06C;
+}
+.item ul li{
+	list-style:none;
+}
+.item ul li a img{
+	float:left;
+	width:250px;
+	height:250px;
+	margin:0 4px;
+}
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+	  $(window).scroll(function(){
+		  var items = $("#content").find(".item");
+		  var nav = $("#nav");
+		  var top = $(document).scrollTop();
+		  var currentId = "";
+		  
+		  items.each(function(){
+            var This = $(this);
+			if(top > This.offset().top-300){
+				currentId = "#" + This.attr("id");
+			}else{
+				return false;
+			}
+        });
+		
+		var currentLink = nav.find(".currnet");
+		if(currentId&&currentId!=currentLink.attr("href")){
+			currentLink.removeClass("current");
+			nav.find("[href=" + currentId +"]").addClass("current");
+		}		
+	  });    
+});
+</script>
+</head>
+
+<body>
+  <div id="bigBox">
+    <div id="nav">
+       <ul>
+         <li><a href="#item1" class="current">1F 男装</a></li>
+         <li><a href="#item2">2F 女装</a></li>
+         <li><a href="#item3">3F 美妆</a></li>
+         <li><a href="#item4">4F 数码</a></li>
+         <li><a href="#item5">5F 母婴</a></li>
+       </ul>
+    </div>
+    <div id="content">
+    	<h1>地狗购物网</h1>
+    <div  id="item1" class="item">
+      <h2>1F 男装</h2>
+      <ul>
+    	<li>
+        	<a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+            <a><img src="images/1F.jpg"></img></a>
+        <li>
+      </ul>
+    </div>
+    <div  id="item2" class="item">
+      <h2>2F 女装</h2>
+      <ul>
+    	<li>
+        	<a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+            <a><img src="images/2F.jpg"></img></a>
+        <li>
+      </ul>
+    </div>
+    <div  id="item3" class="item">
+      <h2>3F 美妆</h2>
+      <ul>
+    	<li>
+        	<a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+            <a><img src="images/3F.jpg"></img></a>
+        <li>
+      </ul>
+    </div>
+    <div  id="item4" class="item">
+      <h2>4F 数码</h2>
+      <ul>
+    	<li>
+        	<a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+            <a><img src="images/4F.png"></img></a>
+        <li>
+      </ul>
+    </div>
+    <div  id="item5" class="item">
+      <h2>5F 母婴</h2>
+      <ul>
+    	<li>
+        	<a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+            <a><img src="images/5F.jpg"></img></a>
+        <li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

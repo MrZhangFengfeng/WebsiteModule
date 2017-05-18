@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<head>
+<meta charset=utf-8" />
+<title>简单时间显示</title>
+</head>
+<body>
+ <div class="content1">
+  <div id="show">显示时间的位置</div>
+ </div>
+</body>
+<script language=""type="text/javascript">
+window.onload=function(){
+	showTime();
+}
+function checkTime(i){
+	if(i<10){
+		i = "0"+i;		
+	}
+	return i;
+}
+
+function showTime(){
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth()+1;
+	var day = now.getDate();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	minute = checkTime(minute);
+	second = checkTime(second);
+	
+	var weekday =new Array(7);
+	weekday[0]="星期日"
+	weekday[1]="星期一"
+	weekday[2]="星期二"
+	weekday[3]="星期三"
+	weekday[4]="星期四"
+	weekday[5]="星期五"
+	weekday[6]="星期六"
+	
+	document.getElementById("show").innerHTML=""+year+"年"+month+"月"+day+"日 "+weekday[now.getDay()]+""+hour+":"+minute+":"+second;
+	t = setTimeout('showTime()',500); 
+}
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+   *{
+	   margin:0;
+	   padding:0;
+	   font-size:16px;
+   }
+   ul{ 
+       padding-left:80px;
+	   border-bottom:10px solid #F60;
+	   width:100%;
+	   overflow:hidden;
+   }
+   ul li{
+	   margin-top:20px;
+	   font-size:16px;
+	   width:80px;
+	   height:30px;
+	   line-height:30px;
+	   margin:20px 2px 0;
+	   text-align:center;
+	   list-style:none;
+	   float:left;
+	   background-color:#CCC;
+   }
+   .selected{
+	   background-color:#F60;
+	   color:#FFF;
+   }
+   ul li:hover{
+	   background-color:#F60;
+	   color:#FFF;
+	   cursor:pointer;
+   }
+</style>
+</head>
+
+<body>
+     <ul class="nav">
+        <li class="selected">首页</li>
+        <li>产品展示</li>
+        <li>关于我们</li>
+        <li>售后服务</li>
+        <li>联系我们</li>
+     </ul>
+</body>
+</html>

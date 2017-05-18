@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>向上无缝滚动</title>
+<style type="text/css">
+ *{
+ margin:0;
+ padding:0;
+ }
+ 
+ #IMOOC{
+	 margin:50px auto 0;
+	 width:492px;
+	 height:190px;
+	 text-align:centerl;
+	 overflow:hidden;
+	 border:4px solid #ababab;
+	 border-radius:16px;
+	 box-shadow:2px 2px 10px #ababab
+	 
+ }
+ #ImoocTitle{
+	 position:relative;
+	 width:480px;
+	 height:60px;
+	 line-height:60px;
+	 background:#C00;
+	 color:	#FFF;
+	 border-radius:10px 10px 0 0;
+	 text-align:left;
+	 padding-left:20px;
+	 font:30px/60px 黑体;
+ }
+ #ImoocTitle a{
+  position:absolute;
+  right:16px;
+  bottom:6px;
+  display:inline;
+  font:16px/24px 黑体;
+  color:#FFF;
+  text-decoration:none;
+ }
+ 
+ #ImoocBox{
+	 width:462px;
+	 height:100px;
+	 padding:0 15px;
+	 padding-top:15px;
+	 padding-bottom:15px;
+	 overflow:hidden;
+ }
+ 
+ #con1 a,#con2 a{
+	 text-decoration:none;
+ }
+ 
+ li{
+	 list-style:none;
+	 text-align:left;
+	 padding-left:15px;
+	 height:24px;
+	 line-height::24px;
+	 text-decoration:none;
+	 color:#000;
+ }
+ 
+ li span{
+	float:right;
+	color:#999;
+ }
+
+ #ImoocBox ul li a:link,a:visited{
+	 color:#000;
+ }
+  #ImoocBox ul li a:hover,a:active{
+	 color:#F00;
+ }
+ 
+</style>
+</head>
+
+<body>
+<div id="IMOOC">
+  <h3 id="ImoocTitle">家有夏宝<a href="#">更多&gt&gt</a></h3>
+  <div id="ImoocBox">
+    <ul id="con1">
+      <li><a href="#">1.我家有个夏宝宝</a><span>2016.11.09</span></li>
+      <li><a href="#">2.聪明可爱又美丽</a><span>2016.11.09</span></li>
+      <li><a href="#">3.每天逗我开心逗我笑</a><span>2016.11.09</span></li>
+      <li><a href="#">4.宝宝天生是吃货</a><span>2016.11.09</span></li>
+      <li><a href="#">5.周六逛吃又逛吃</a><span>2013-11-06</span></li>
+      <li><a href="#">6.宝宝还是贪玩鬼</a><span>2013-11-08</span></li>
+      <li><a href="#">7.居然宁愿少吃也要玩</a><span>2013-11-15</span></li>
+      <li><a href="#">8.当然有吃有玩最开心</a><span>2013-11-22</span></li>
+      <li><a href="#">9.哥哥逆袭带你嗨</a><span>2013-12-06</span></li>
+    </ul>
+    <ul id="con2">
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+ var area = document.getElementById('ImoocBox');
+ var con1 = document.getElementById('con1');
+ var con2 = document.getElementById('con2');
+ var speed = 50;
+ area.scrollTop = 0;
+ con2.innerHTML = con1.innerHTML;
+ function scrollUp(){
+	 if(area.scrollTop >= con1.scrollHeight) {
+		 area.scrollTop = 0;
+		 }else{
+		   area.scrollTop ++; 
+		 } 
+}
+var myScroll = setInterval("scrollUp()",speed);
+area.onmouseover = function(){
+	 clearInterval(myScroll);
+	}
+area.onmouseout = function(){
+	 myScroll = setInterval("scrollUp()",speed);
+	}
+ </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>微博对话框</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+  *{
+	  margin:0;
+	  padding:0;
+	  font-size:12px;
+  }
+  .bigBox{
+	  margin:40px auto;
+	  width:800px;
+  }
+  .box{
+	  padding:5px;
+	  overflow:hidden;
+  }
+  .pic img{
+	  padding:4px;
+	  border:1px solid #333;
+	  float:left;
+  }
+  .con{
+	  width:500px;
+	  height:100px;
+	  margin-left:15px;
+	  float:left;
+	  background-color:#6FC;
+	  border:1px solid #999;
+	  padding:10px;
+	  position:relative;
+  }
+  .con p{
+	  display:block;
+	  float:left;
+	  text-indent:2em;
+  }
+  .time{
+	  color:#999;
+	  position:absolute;
+	  right:5px;
+	  top:5px;
+  }
+</style>
+</head>
+
+<body>
+  <div class="bigBox">
+     <div class="box">
+        <div class="pic">
+           <img src="images/head01.jpg"></img>
+        </div>
+        <div class="con">
+        <span>樱桃小丸子</span></br></br>
+          <p>离开房间辣九分裤拉丝机的付款了就爱看多了哈房交会饭卡减肥咖啡撒抵抗力发多少开了房就付款垃圾；发来看看开了房就开了借记卡的积分  大反馈件大事看解决控到死房间看电视就看似简单卡就付款垃圾但是看金卡戴珊就开了登录</p>
+          <div class="time">
+            <spam>10分钟前</span>
+          </div>
+        </div>
+     </div>
+<!--     <div class="box">
+     </div>
+     <div class="box">-->
+     </div>
+  </div>
+</body>
+</html>

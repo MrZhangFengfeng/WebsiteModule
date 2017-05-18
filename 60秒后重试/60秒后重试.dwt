@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>60秒后重试</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div>
+<input  type="button" id="send" value="发送验证码"/>
+</div>
+
+<script type="text/javascript">
+  window.onload=function(){
+	  var send = document.getElementById("send");
+	  var times = 60;
+      send.onclick=function(){
+		  timer = setInterval(function(){
+			  times--;
+			  if(times<=0){
+				  clearInterval(timer);
+				  send.disabled=false;
+				  times=60;
+				  send.value="发送验证码";
+			  }else{
+				  send.disabled=true;
+				  send.value=times+"秒后重试";
+			  }
+		  },1000)	 
+	  }
+  }
+</script>
+</body>
+</html>

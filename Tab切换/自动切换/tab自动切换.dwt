@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Tab_自动切换</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	list-style:none;
+}
+.BigBox{
+	width:398px;
+	height:148px;
+	margin:40px auto;
+	border:1px solid #666;
+	overflow:hidden;
+}
+.title{
+	height:50px;
+	background-color:#CCC;
+	position:relative;
+}
+.title ul{
+	position:absolute;
+	width:401px;
+	left:-1px;
+}
+.title li{
+	width:78px;
+	height:49px;
+	float:left;
+	overflow:hidden;
+	text-align:center;
+	font-size:22px;
+	font-family:微软雅黑;
+	padding:0 1px;
+	line-height:49px;
+	border-bottom:1px solid #666;
+	cursor:pointer;
+}
+.title .select{
+	background-color:#FFF;
+	border-bottom:1px solid #FFF;
+	border-left:1px solid #666;
+	border-right:1px solid #666;
+	padding:0;
+	font-weight:bolder;
+}
+
+.mod{
+	margin:5px 10px;
+}
+
+.mod li{
+	float:left;
+	font-size:20px;
+	width:170px;
+	height:30px;
+	line-height:30px;
+	padding-top:10px;
+	padding-left:15px;
+	overflow:hidden;
+	cursor:default;
+}
+</style>
+</head>
+
+<body>
+ <div class="BigBox">
+    <div id="title" class="title">
+      <ul>
+       <li class="select">公告</li>
+       <li>规则</li>
+       <li>论坛</li>
+       <li>安全</li>
+       <li>公益</li>
+      </ul>
+    </div>
+    <div id="con" class="con">
+       <div class="mod">
+         <ul>
+            <li>赵凯：打游戏喊我</li>
+            <li>赵凯：打游戏喊我</li>
+            <li>赵凯：打游戏喊我</li>
+            <li>赵凯：打游戏喊我</li>
+         </ul>
+       </div>
+       <div class="mod">
+         <ul>
+            <li>张磊：请你吃烤肉</li>
+            <li>张磊：请你吃烤肉</li>
+            <li>张磊：请你吃烤肉</li>
+            <li>张磊：请你吃烤肉</li>
+         </ul>
+       </div>
+       <div class="mod">
+         <ul>
+            <li>张杰：我要喝酒</li>
+            <li>张杰：我要喝酒</li>
+            <li>张杰：我要喝酒</li>
+            <li>张杰：我要喝酒</li>
+         </ul>
+       </div>
+       <div class="mod">
+         <ul>
+            <li>宋敏杰：去泡脚</li>
+            <li>宋敏杰：去泡脚</li>
+            <li>宋敏杰：去泡脚</li>
+            <li>宋敏杰：去泡脚</li>
+         </ul>
+       </div>
+       <div class="mod">
+         <ul>
+            <li>吴玉阳：我能睡</li>
+            <li>吴玉阳：我能睡</li>
+            <li>吴玉阳：我能睡</li>
+            <li>吴玉阳：我能睡</li>
+         </ul>
+       </div>
+    </div>
+ </div>
+ 
+ <script type="text/javascript">
+     window.onload=function(){
+		 var liList = document.getElementById('title').getElementsByTagName('li');
+		 var divs = document.getElementsByClassName('mod');
+		 
+		 var index = -1;
+		 var timer = null;
+		 //绑定事件
+		 for(var i=0;i<liList.length;i++){
+			 liList[i].id=i;
+			 liList[i].onmouseover=function(){
+				 clearInterval(timer);
+				 change(this.id);
+			 }
+			 liList[i].onmouseout=function(){
+                 timer = setInterval(auto,1000);
+			 }
+	     }
+		 
+		 if(timer){
+			 clearInterval(timer);
+			 timer = null;
+		 }
+		 timer = setInterval(auto,1000);
+		 function auto(){
+			 index++;
+			 if(index>=liList.length){
+				 index=0;
+			 }
+			 change(index);
+		 }
+		 
+		 auto();
+		 
+		 
+		 function change(curIndex){
+		   for(var i=0;i<liList.length;i++){
+			   liList[i].className='';
+			   divs[i].style.display = 'none';
+		   }
+		       liList[curIndex].className='select';
+			   divs[curIndex].style.display = 'block';			   
+			   index = curIndex;
+		 }
+	 }
+ </script>
+</body>
+</html>

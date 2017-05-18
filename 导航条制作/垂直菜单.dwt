@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>垂直菜单</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+  *{
+	  margin:0;
+	  padding:0;
+	  font-size:12px;
+  }
+  .BigBox{
+	  width:200px;
+	  margin:40px auto;
+	  border-radius:2px;
+  }
+  .nav li{
+	  display:block;
+	  width:200px;
+	  height:30px;
+	  line-height:30px;
+	  list-style:none;
+	  color:#000;
+	  background-color:#CCC;
+	  margin:5px 0;
+	  font-size:24px;
+	  text-align:center;
+  }
+  .nav li:hover{
+	  background-color:#F60;
+	  color:#FFF;
+	  cursor:pointer;
+  }
+</style>
+</head>
+
+<body>
+  <div class="BigBox">
+     <ul class="nav">
+        <li>首页</li>
+        <li>服务模式</li>
+        <li>产品展示</li>
+        <li>售后服务</li>
+        <li>关注我们</li>
+     </ul>
+  </div>
+</body>
+</html>

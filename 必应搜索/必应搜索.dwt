@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+body{
+	background-color:#666;
+}
+.bg-div{
+	background-image:url(images/river.jpg);
+	width:1228px;
+	height:690px;
+	margin:0 auto;
+}
+.logo{
+	float: left;
+	background-image: url(images/logo.png);
+	width: 107px;
+	height: 53px;
+	margin: -4px 18px 0 0; 
+}
+
+.search-box{
+	position: absolute;
+	top: 200px;
+	left: 550px;
+}
+
+.search-form{
+   float:left;
+   padding:5px;
+   background-color:#fff;
+}
+.search-text{
+	width:350px;
+	height:25px;
+	line-height:25px;
+	outline:none;
+	border:none;
+	float:left;
+}
+.search-button{
+	float:left;
+	background-image:url(images/search-button.png);
+	width:29px;
+	height:29px;
+	border:none;
+}
+.clearfix:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0px;
+}
+.clearfix{
+	zoom:1;
+}
+
+.nav{
+	color:#CCC;
+	width:1228px;
+	margin:0 auto;
+}
+.nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.nav ul li{
+	float:left;
+	padding:10px;
+}
+.nav ul li a{
+	text-decoration:none;
+	color:#FFF;
+	font:bold 16px/24px  Verdana, Geneva, sans-serif;
+}
+.nav ul li a:hover{
+	color: #F00;
+}
+</style>
+</head>
+<body>
+<div class="nav">
+<ul class="clearfix">
+	<li><a href="#">图片</a></li>
+	<li><a href="#">视频</a></li>
+	<li><a href="#">词典</a></li>
+	<li><a href="#">咨询</a></li>
+	<li><a href="#">地图</a></li>
+	<li><a href="#">影响力</a></li>
+	<li><a href="#">更多</a></li>
+</ul>
+</div>
+ <div class="bg-div">
+ 	<div class="search-box">
+ 	<div class="logo"></div>
+ 	
+	 	<form class="search-form" action="https://cn.bing.com/search" target="_blank" id="search-form">
+	 		<input type="text" class="search-text" name="q" id="search_input" autocomplete="off" />
+	 		<input type="submit" class="search-button" value=""/>
+	 	</form>
+
+ 	</div>
+ </div>
+</body>
+</html>

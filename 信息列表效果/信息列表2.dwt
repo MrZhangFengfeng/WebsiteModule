@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>信息列表效果</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+/*通用*/
+*{
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+#mainbody{
+	border:1px solid #666;
+	width:560px;
+	height:auto;
+	margin:20px auto;
+	overflow:hidden;
+}
+/*头部*/
+.top{
+	height:40px;
+}
+.top a{
+	display:block;
+	text-decoration:none;
+	width:16px;
+	height:16px;
+	float:right;
+	margin:5px;
+}
+.list_off{
+	background:url(images/btns.jpg) no-repeat -38px -34px;
+}
+.list_on{
+	background:url(images/btns.jpg) no-repeat -21px 0;
+}
+/*主体*/
+#mainbody ul{
+	margin-left:19px;
+}
+#mainbody ul li{
+	display:block;
+	width:164px;
+	height:auto;
+	float:left;
+	border:1px solid #666;
+	margin:5px;
+}
+.small{
+	width:50px;
+	height:50px;
+	display:block;
+	margin:5px;
+	float:left;
+}
+p a,p span{
+	display:block;
+	line-height:20px;
+	text-decoration:none;
+	color:#000;
+	text-indent:0.5em;
+    padding:2px;
+}
+.bottom{
+	clear:both;
+	border:1px solid #CCC;
+	background-color:#CCC;
+	text-align:center;
+	height:36px;
+	line-height:36px;
+}
+</style>
+</head>
+
+<body>
+  <div id="mainbody">
+      <div class="top">
+       <a src="#" id="btn1" class="list_off"></a>
+       <a src="#" id="btn2" class="list_on"></a>
+      </div>
+       <ul>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+        <li>
+         <div class="info">
+          <a href="#" class="small"><img src="images/small.jpg"></img></a>
+          <p>
+            <span>静安区</span>
+            <span>上海市</span>
+            <a href="#">18个共同好友</a>
+          </p>
+         </div>
+         <div class="bottom">
+            未分组好友
+         </div>
+        </li>
+       </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>新闻列表页</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<style type="text/css">
+
+* {
+    margin: 0;
+    padding: 0;
+	font-size:12px;
+    font-family: "微软雅黑";
+}
+.news{
+	width:300px;
+	height:180px;
+	border:1px solid #999;
+	margin:20px auto;
+	padding:5px;
+}
+.news_list li{
+	list-style:none;
+	height:30px;
+}
+.top em{
+	font-style:normal;
+	width:20px;
+	height:16px;
+	background:url(images/num.gif) no-repeat;
+	margin-right:10px;
+	color:#FFF;
+	text-align:center;
+	display:block;
+	float:left;
+}
+.normal em{
+	font-style:normal;
+	width:20px;
+	height:16px;
+	background:url(images/num.gif) no-repeat;
+	margin-right:10px;
+	color:#FFF;
+	text-align:center;
+	background-position:0 -16px;
+	display:block;
+	float:left;
+}
+.news_list a{
+	text-decoration:none;
+	color:#999;
+}
+.news_list a:hover{
+	color:#F00;
+	text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+<div class="news">
+ <ul class="news_list">
+   <li class="top"><em>01</em><a href="https://www.baidu.com">一文读懂总书记的网信战记的网</a></li>
+   <li class="top"><em>02</em><a href="https://www.baidu.com">明晚迎接超级月亮</a></li>
+   <li class="top"><em>03</em><a href="https://www.baidu.com">美国大选特朗普生胜选书记的</a></li>
+   <li class="normal"><em>04</em><a href="https://www.baidu.com">中国600公里高速磁选</a></li>
+   <li class="normal"><em>05</em><a href="https://www.baidu.com">日本女防长对特朗书普说不</a></li>
+   <li class="normal"><em>06</em><a href="https://www.baidu.com">闹独立的加州家底有多记的网</a></li>
+ </ul>
+</div>
+</body>
+</html>
