@@ -1,0 +1,21 @@
+#main{
+	-webkit-column-width: 202px;
+	-moz-column-width: 202px;
+	-o-column-width: 202px;
+	column-width: 202px;
+}
+.box{
+	padding:15px 0 0 15px;
+	display: inline-block;
+}
+.pic{
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ccc;
+	width: 165px;
+}
+.pic img{
+	display: block;
+	width: 165px;
+}
